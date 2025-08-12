@@ -13,9 +13,16 @@
     >
       Show quantity
     </button>
-    <button>Add to cart</button>
+    <button onclick="
+    cartQuantity = cartQuantity + 1;
+     console.log(`cart quantity: ${cartQuantity}`);
+    "
+    ">Add to cart</button>
+
     <button>+2</button>
+
     <button>+3</button>
+
     <button>Reset cart</button>
     <script>
       let cartQuantity = 0;
