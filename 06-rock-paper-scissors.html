@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rock paper scissors</title>
+  </head>
+  <body>
+    <h1>Rock paper scissors</h1>
+    <button
+      onclick="
+     const randomNumber = Math.random();
+     if (randomNumber >0 && randomNumber <= 0.33){
+     alert('The computer played rock it is a tie');
+     }
+     else if (randomNumber > 0.33 && randomNumber <= 0.66){
+     alert('The computer played paper the computer wins');
+     }
+     else{
+     alert('The computer played scissors You win')
+     }
+     
+     "
+    >
+      Rock
+    </button>
+    <button
+      onclick="
+      randomNumber = Math.random();
+     if (randomNumber >=0 && randomNumber < 1/3){
+     alert('The computer played rock You win');
+     }
+     else if (randomNumber >= 1/3 && randomNumber < 2/3){
+     alert('The computer played paper Its a tie');
+     }
+     else{
+     alert('The computer played scissors Computer wins')
+     }
+     
+     "
+    >
+      Paper
+    </button>
+    <button
+      onclick="
+      randomNumber = Math.random();
+     if (randomNumber >=0&& randomNumber < 1/3){
+     alert('The computer played rock Computer wins');
+     }
+     else if (randomNumber >= 1/3 && randomNumber   < 2/3){
+     alert('The computer played paper You win');
+     }
+     else{
+     alert('The computer played scissors It is a tie')
+     }
+     
+     "
+    >
+      Scissors
+    </button>
+    <script></script>
+  </body>
+</html>
