@@ -1,0 +1,10 @@
+      const variable1 = "Hello";
+      const variable2 = 5;
+      const calculation = variable2 + 10;
+      const result = calculation + 2;
+      console.log(calculation + 3);
+      console.log(result);
+      console.log(variable1);
+      console.log(variable2);
+      console.log(typeof variable2);
+      const variables = 8;
