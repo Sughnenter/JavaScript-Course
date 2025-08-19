@@ -1,5 +1,6 @@
 console.log(document.querySelector('button').innerHtml);
 document.querySelector('button').innerHtml = 'changed';
+console.log(document.querySelector('.js-button'));
 
 // console.log(document.title);
 // document.title = 'changed';
