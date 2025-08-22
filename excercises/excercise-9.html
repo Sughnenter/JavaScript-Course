@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button onclick="console.log(document.querySelector('button'))">
+      button
+    </button>
+    <button
+      onclick="document.querySelector('.button2').innerHTML = 'done';"
+      class="button2"
+    >
+      button
+    </button>
+    <button onclick="playGame('Heads')">Heads</button>
+    <button onclick="playGame('Tails')">Tails</button>
+    <p class="js-pick"></p>
+  </body>
+  <script>
+    let playerPick = "";
+    function playGame(playerPick) {
+      if (playerPick === "Heads") {
+        document.querySelector(".js-pick").innerHTML = "You picked Heads";
+      } else if (playerPick === "Tails") {
+        document.querySelector(".js-pick").innerHTML = "You picked Tails";
+      }
+    }
+  </script>
+</html>
