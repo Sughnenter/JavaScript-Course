@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="static/styles/12-to-do-list.css" />
+  </head>
+  <body>
+    <h3>To do List Practice 1</h3>
+    <input type="text" placeholder="Todo name" class="first-todo-input" />
+    <button onclick="addTodo()">add</button>
+
+    <h3>To do List Practice 2</h3>
+    <input type="text" placeholder="Todo name" class="second-todo-input" />
+    <button onclick="addsecondTodo()">add</button>
+    <p>To do List</p>
+    <div class="todo-list-div">
+      <input type="text" placeholder="Todo name" class="todo-input" />
+      <input type="date" placeholder="Due Date" class="date-todo-input" />
+      <button class="add-button" onclick="addFinalTodo()">Add</button>
+      <div class="js-todo-list todo-grid"></div>
+    </div>
+
+    <script src="static/scripts/12-to-do-list.js"></script>
+  </body>
+</html>
