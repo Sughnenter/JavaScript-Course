@@ -40,20 +40,65 @@
 // }
 
 
-const nums = [1, 1, 3];
-let total = 0;
+// const nums = [1, 1, 3];
+// let total = 0;
 
-for (let i = 0; i < nums.length; i++) {
-  const num = nums[i];
-  total += num;
+// for (let i = 0; i < nums.length; i++) {
+//   const num = nums[i];
+//   total += num;
 
+// }
+// console.log(total);
+
+// const numsDoubled = [];
+
+// for (let i = 0; i < nums.length; i++){
+//   const num = nums[i];
+//   numsDoubled.push(num * 2);
+// }
+// console.log(numsDoubled)
+
+const array1 = [1, 2, 3];
+const array2 = array1.slice(); //creates a copy of array1
+array2.push(4);
+console.log(array1);
+console.log(array2);
+
+const [firstValue, secondValue] = [1, 2, 3]; //destructuring
+console.log(firstValue);
+
+
+for (let i = 1; i <= 10; i++) {
+    if (i % 3 === 0) { continue; } //skips the value of 3 and 6 because they are divisible by 3, does not skip 9 because loops stops at 8
+    console.log(i);
+    if (i === 8) {
+        break;  //stops the loop when i is 8
+    }
 }
-console.log(total);
 
-const numsDoubled = [];
 
-for (let i = 0; i < nums.length; i++){
-  const num = nums[i];
-  numsDoubled.push(num * 2);
+let i = 1;
+while (i <= 10) {
+    if (i % 3 === 0) {
+        i++;
+        continue; //skips 3, 6 and 9, in a while loop you have to increment i before continue otherwise it will be an infinite loop
+    }
+    console.log(i);
+    i++;
 }
-console.log(numsDoubled)
+
+
+function doubleArray(nums) {
+    const numsDoubled = [];
+
+    for (let i = 0; i < nums.length; i++) {
+        const num = nums[i];
+        if (num === 0) {
+            return numsDoubled;
+        } //stops the loop if num is 0
+        numsDoubled.push(num * 2);
+    }
+    return numsDoubled
+}
+console.log(doubleArray([1, 2, 3]));
+console.log(doubleArray([6, 7, 8, 4, 0],));
