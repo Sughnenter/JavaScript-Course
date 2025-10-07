@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const myArray = [10, 20, 30];
+      myArray[2] = 99;
+      console.log(myArray);
+      lastArray(myArray);
+
+      const friends = ["Alice", "Bob", "Charlie"];
+      lastArray(friends);
+
+      function lastArray(name) {
+        console.log(name[name.length - 1]);
+      }
+    </script>
+  </body>
+</html>

@@ -14,14 +14,12 @@
     <h3>To do List Practice 2</h3>
     <input type="text" placeholder="Todo name" class="second-todo-input" />
     <button onclick="addsecondTodo()">add</button>
-
-    <div class="js-todo-list"></div>
-
+    <p>To do List</p>
     <div class="todo-list-div">
-      <h3>To do List</h3>
       <input type="text" placeholder="Todo name" class="todo-input" />
-      <input type="text" placeholder="Todo name" class="todo-input" />
-      <button class="add-button">Add</button>
+      <input type="date" placeholder="Due Date" class="date-todo-input" />
+      <button class="add-button" onclick="addFinalTodo()">Add</button>
+      <div class="js-todo-list todo-grid"></div>
     </div>
 
     <script src="static/scripts/11-to-do-list.js"></script>
