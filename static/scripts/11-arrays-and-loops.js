@@ -10,7 +10,9 @@
 // console.log(myArray.length);
 // myArray.push(50);
 // console.log(myArray);
-// myArray.splice(0, 1);
+// myArray.splice(0, 1); removes first element
+// console.log(myArray);
+// myArray.splice(1, 2); removes 2 elements starting from index 1
 // console.log(myArray);
 
 

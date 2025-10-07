@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const names = ["Alice", "Bob", "Charlie", "search", "David", "search"];
+
+      const foods = ["apple", "banana", "orange", "grape", "mango"];
+      for (let i = 0; i < names.length; i++) {
+        const name = names[i];
+        if (name === "search") {
+          console.log(i);
+          break;
+        } else {
+          console.log("not found");
+        }
+      }
+
+      function findIndex(array, word) {
+        for (let i = 0; i < array.length; i++) {
+          if (array[i] === word) {
+            console.log(i);
+            break;
+          } else {
+            console.log("not found");
+          }
+        }
+      }
+
+      findIndex(foods, "escalade");
+      findIndex(names, "Alice");
+    </script>
+  </body>
+</html>
