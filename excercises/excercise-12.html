@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button class="js-start-button" onclick="changeText()">Start</button>
+    <button class="start-button">Start</button>
+    <button class="js-add-button">Add to Cart</button>
+    <p class="js-Adding"></p>
+
+    <script>
+      const add = function addition() {
+        console.log(2 + 3);
+      };
+      add();
+      console.log(add);
+
+      function runTwice(add) {
+        add();
+        add();
+      }
+      runTwice(add);
+
+      document.querySelector(".js-start-button").addEventListener("click", add);
+
+      function changeText() {
+        setTimeout(() => {
+          document.querySelector(".js-start-button").innerHTML = "Finished";
+        }, 1000);
+      }
+
+      document
+        .querySelector(".start-button")
+        .addEventListener("click", newText);
+
+      function newText() {
+        const btn = document.querySelector(".start-button");
+        btn.innerHTML = "Loading...";
+        setTimeout(() => {
+          btn.innerHTML = "Finished";
+        }, 1000);
+      }
+
+      let cartTimeoutId;
+      document
+        .querySelector(".js-add-button")
+        .addEventListener("click", addToCart);
+      function addToCart() {
+        const paragraph = document.querySelector(".js-Adding");
+        paragraph.innerHTML = "Adding to cart...";
+        // Clear any previous timeout
+        if (cartTimeoutId) {
+          clearTimeout(cartTimeoutId);
+        }
+        cartTimeoutId = setTimeout(() => {
+          paragraph.innerHTML = "Added to cart";
+          // Remove the paragraph after another second
+          setTimeout(() => {
+            paragraph.innerHTML = "";
+          }, 1000);
+        }, 1000);
+      }
+      let messageTimeoutId;
+      document
+        .querySelector(".js-message-button")
+        .addEventListener("click", showMessage);
+
+      function showMessage() {
+        setInterval(() => {
+          document.title = "(2) New Messages";
+        }, 2000);
+        clearInterval();
+      }
+    </script>
+  </body>
+</html>
