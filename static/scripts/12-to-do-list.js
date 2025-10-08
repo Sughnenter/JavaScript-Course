@@ -3,7 +3,7 @@ const todoList = [{ name: 'make dinner', dueDate: '2025-10-07' }, { name: 'wash 
 function renderTodoList() {
   let todoListHTML = '';
 
-  todoList.forEach(function (todoObject, index) {
+  todoList.forEach( (todoObject, index) =>{
     const { name, dueDate } = todoObject; //destructuring, does the same thing as the line of code above
     const html = `<div> ${name}</div> <div> ${dueDate}</div>
     <button class="delete-button" onclick="

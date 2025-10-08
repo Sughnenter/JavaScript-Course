@@ -4,42 +4,26 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Rock paper scissors</title>
-    <link rel="stylesheet" href="static/styles/12-rock-paper-scissors.css">
+    <link rel="stylesheet" href="static/styles/12-rock-paper-scissors.css" />
   </head>
   <body>
     <h1>Rock paper scissors</h1>
-    <button
-    class="rock-button"
-      onclick="
-     playGame('rock')
-     "
-    >
-    <img src="static/images/rock-emoji.png" alt=" ✊">
-   
+    <button class="rock-button js-rock-button">
+      <img src="static/images/rock-emoji.png" alt=" ✊" />
     </button>
-    <button
-    class="paper-button"
-      onclick="
-      playGame('paper')
-     "
-    >
-    <img src="static/images/paper-emoji.png" alt="🖐">
-      
+    <button class="paper-button js-paper-button">
+      <img src="static/images/paper-emoji.png" alt="🖐" />
     </button>
-    <button
-    class="scissors-button"
-      onclick="
-     playGame('scissors')
-     "
-    >
-     <img src="static/images/scissors-emoji.png" alt=" ✌">
-     
+    <button class="scissors-button js-scissors-button">
+      <img src="static/images/scissors-emoji.png" alt=" ✌" />
     </button>
     <p class="js-result"></p>
     <p class="js-moves"></p>
     <p class="js-score"></p>
-    <button class="reset-score-button" onclick="resetScore(), updateScore() ">Reset score</button>
-    <button class="auto-play-button" onclick="autoPlay()">Auto Play</button> 
+    <button class="reset-score-button js-reset-score-button">
+      Reset score
+    </button>
+    <button class="auto-play-button js-auto-play-button">Auto Play</button>
     <script src="static/scripts/12-rock-paper-scissors.js"></script>
   </body>
 </html>
