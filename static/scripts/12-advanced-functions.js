@@ -60,10 +60,10 @@
 //     method(){}
 // }
 
-const buttonElement = document.querySelector('.js-click-button');
+// const buttonElement = document.querySelector('.js-click-button');
 
-const eventListener = () => { console.log('click') };
-buttonElement.addEventListener('click', eventListener);
-buttonElement.removeEventListener('click', eventListener);
+// const eventListener = () => { console.log('click') };
+// buttonElement.addEventListener('click', eventListener);
+// buttonElement.removeEventListener('click', eventListener);
 
-buttonElement.addEventListener('click', () => { console.log('click2') });
+// buttonElement.addEventListener('click', () => { console.log('click2') });

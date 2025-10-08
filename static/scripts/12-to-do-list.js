@@ -3,11 +3,10 @@ const todoList = [{ name: 'make dinner', dueDate: '2025-10-07' }, { name: 'wash 
 function renderTodoList() {
   let todoListHTML = '';
 
-  todoList.forEach( (todoObject, index) =>{
+  todoList.forEach((todoObject, index) => {
     const { name, dueDate } = todoObject; //destructuring, does the same thing as the line of code above
     const html = `<div> ${name}</div> <div> ${dueDate}</div>
-    <button class="delete-button" onclick="
-    todoList.splice(${index}, 1); renderTodoList()"
+    <button class="delete-button js-delete-button"
     >Delete</button> `;
     todoListHTML += html;
   }
@@ -15,7 +14,17 @@ function renderTodoList() {
 
 
   document.querySelector('.js-todo-list').innerHTML = todoListHTML
+  document.querySelectorAll('.js-delete-button').forEach((deleteButton, index) => {
+    deleteButton.addEventListener('click', () => {
+      todoList.splice(index, 1); renderTodoList();
+    })
+  }
+  )
 }
+
+document.querySelector('.js-add-button').addEventListener('click', () => {
+  addFinalTodo();
+});
 
 
 const firstInput = document.querySelector('.first-todo-input');
