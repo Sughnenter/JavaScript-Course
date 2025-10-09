@@ -67,3 +67,18 @@
 // buttonElement.removeEventListener('click', eventListener);
 
 // buttonElement.addEventListener('click', () => { console.log('click2') });
+
+console.log([1, -3, 5].filter((value, index) => {
+    // if (value >= 0) {
+    //     return true
+    // } else {
+    //     return false
+    // } 
+    return value >= 0
+}))
+
+
+console.log([1, 1, 3].map((value, index) => {
+    return value *2
+}))
+console.log([1, 1, 3].map(value => value *2))
